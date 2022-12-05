@@ -1,0 +1,51 @@
+/*==================================================================================
+    Custom Stylesheet (Any custom styling you want to apply should be defined here).
+====================================================================================*/
+
+.logo{
+    width: 150px;
+}
+.main-menu-wrap .btn{
+    background-color: #cddd00;
+    border:none;
+}
+.sticky .main-menu-wrap .btn{
+    border: 1px solid #000;
+}
+.greenTitle{
+    color:#cddd00;
+}
+.grayTitle{
+    color:#ccc;
+}
+.paraph-margin{
+    margin: 0px 30px;
+}
+.habu-icon-green {
+    width: 150px;
+    background-color: #cddd00;
+    border-radius: 120px 120px 120px 120px;
+    margin-left: 28%;
+    padding: 30px;
+    margin-top: -150px;
+    margin-bottom: 30px;
+}
+.habu-icon-rose {
+    width: 150px;
+    background-color: #bf97be;
+    border-radius: 120px 120px 120px 120px;
+    margin-left: 28%;
+    padding: 30px;
+    margin-top: -150px;
+    margin-bottom: 30px;
+}
+
+.habu-icon-aqua {
+    width: 150px;
+    background-color: #92c0c9;
+    border-radius: 120px 120px 120px 120px;
+    margin-left: 28%;
+    padding: 30px;
+    margin-top: -150px;
+    margin-bottom: 30px;
+}
