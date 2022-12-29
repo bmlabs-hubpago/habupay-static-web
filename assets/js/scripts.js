@@ -290,8 +290,9 @@ $('.feature-carousel').owlCarousel({
     13: partner carousel
 =====================================================*/
         $('.partner-carousel').owlCarousel({
+            center: true,
             loop: true,
-            margin: 20,
+            margin: 80,
             nav: false,
             dots: false,
             autoplay:true,
