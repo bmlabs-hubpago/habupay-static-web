@@ -45,6 +45,7 @@
     .user-interact-image {
         width: 600px;
         margin-left: -70px;
+        margin-top: 60px;
     }
 
     .user-interact-image.type2 {
@@ -749,9 +750,9 @@
         font-size: 42px;
     }
 
-    .section-title {
+    /*.section-title {
         margin: -8px 0px 78px;
-    }
+    }*/
 
     .banner-text-inner {
         padding-bottom: 80px;

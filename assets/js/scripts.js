@@ -292,7 +292,7 @@ $('.feature-carousel').owlCarousel({
         $('.partner-carousel').owlCarousel({
             center: true,
             loop: true,
-            margin: 80,
+            margin: 90,
             nav: false,
             dots: false,
             autoplay:true,

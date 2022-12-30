@@ -58,7 +58,7 @@
     <!-- End Of Preloader -->
 
     <!-- Main header -->
-    <section class="pb-90" id='top'>
+    <section  id='top'>
     <header class="header">
         <!-- Start Header Navbar-->
         <div class="main-header">
@@ -131,7 +131,7 @@
                             <p>Descubre la forma más fácil de integrar</p>
 
                             <!-- <a href="#" class="btn">Regístrate ya!</a>-->
-                            <a href="#soluciones" class="btn toggle-button">Conóce más</a>
+                            <a href="#soluciones" onclick="removeEvent(event);" class="btn toggle-button">Conóce más</a>
                         </div>
                         <!-- banner text -->
                     </div>
@@ -247,17 +247,17 @@
     </section><!-- /.End of Counter up area -->
 
     <!-- interact user -->
-    <section class="bg-2 pt-120 pb-120">
+    <section class="bg-2 pt-80 pb-120">
         <div class="container">
             <div class="row">
-                <div class="col-lg-7 col-sm-7">
+                <div class="col-lg-7 col-sm-12">
                     <!-- user interact image -->
                     <div class="user-interact-image banner-image">
                         <img src="assets/img/feature/soluciones.png"  alt="">
                     </div>
                     <!-- End of user interact image -->
                 </div>
-                <div class="col-lg-5 col-sm-5">
+                <div class="col-lg-5 col-sm-12">
                     <!-- user ineract text -->
                     <div class="user-interact-inner">
                         <div class="interact-icon">
@@ -267,7 +267,7 @@
                         <p>
                             Con Habu, concentra toda la energia en tu negocio, con una interfaz sencilla de pago, facil administración de botones de medios de pago, los cuales ademas son integrados con tu propio codigo de comercio, podras tener el control de cada transacción sin intervención de terceros. No pierdas información y entrega el mejor servicio a tus cliente.
                         </p>
-                        <a href="#" class="btn">Contáctanos hoy!</a>
+                        <a href="#" onclick="removeEvent(event);" class="btn toggle-button">Contáctanos hoy!</a>
                     </div>
                     <!--End of user ineract text -->
                 </div>
@@ -278,7 +278,7 @@
 
     <!-- app pricing plan -->
     <br><br>
-    <section class="pb-90" id='porquehabu'>
+    <section  id='porquehabu'>
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-md-12 col-lg-8">
@@ -387,7 +387,7 @@
 
     <!-- app video -->
     <br><br>
-    <section class="pb-90" id='video'>
+    <section  id='video'>
     <section class="app-video">
         <div class="container">
             <div class="row">
@@ -484,7 +484,7 @@
     
 
     <!-- contact us -->
-    <section class="pb-90" id='contacto'>
+    <section  id='contacto'>
     <section class="border-top pt-110 pb-150">
         <div class="container">
             <div class="row justify-content-center">
@@ -494,7 +494,7 @@
                             Haz crecer tu Empresa o Emprendimiento desde ya!
                         </h2>
                         <h3>ofreciendole a tus clientes las formas de pago más confiables y rápidas.</h3>
-                        <a href="#" class="btn toggle-button">HABLEMOS</a>
+                        <a href="#" onclick="removeEvent(event);" class="btn toggle-button">HABLEMOS</a>
                     </div>
                 </div>
             </div>
@@ -572,7 +572,7 @@
                                         <li><a href="#">¿Por qué HABU?</a></li>
                                         <li><a href="#">Conócenos</a></li>
                                         <li><a href="#">Ayuda</a></li>
-                                        <li><a href="#">Contacto</a></li>
+                                        <li><a href="#" onclick="removeEvent(event);" class="toggle-button">Contacto</a></li>
                                     </ul>
                                 </div>
                                 
@@ -607,15 +607,64 @@
         <!-- contact -->
         <div class="sidebar-contact">
             <div class="toggle"></div>
-            <h2>Contactanos</h2>
-            <div class="scroll">
-                <form>
-                    <input type="text" name="" placeholder="Nombre">
-                    <input type="email" name="" placeholder="Email">
-                    <input type="rel" name="" placeholder="Ej: 912345678">
-                    <textarea placeholder="Mensaje aquí.."></textarea>
-                    <input type="submit" class="btn" name="" value="enviar">
-                </form>
+            <div id="sidebar-contact" class="active">
+                <h2>Contáctanos</h2>
+                <div class="scroll">
+                    <form  class="needs-validation" novalidate>
+                        <div class="form-row">
+                            <div class="col-12">
+                                <input type="text" 
+                                    maxlength="30" 
+                                    minlength="5"
+                                    name="" 
+                                    placeholder="Nombre" 
+                                    class="form-control form-control-sm" 
+                                    required >
+                                <div class="invalid-feedback">
+                                    Queremos conocer tu Nombre.
+                                </div>
+                            </div>
+        
+                            <div class="col-12">
+                                <input 
+                                    type="email" 
+                                    pattern="[a-zA-Z0-9!#$%&'*_+-]([\.]?[a-zA-Z0-9!#$%&'*_+-])+@[a-zA-Z0-9]([^@&%$\/()=?¿!.,:;]|\d)+[a-zA-Z0-9][\.][a-zA-Z]{2,4}([\.][a-zA-Z]{2})?"  
+                                    maxlength="30" name="" placeholder="ejemplo@email.com" class="form-control form-control-sm" required>
+                                <div class="invalid-feedback">
+                                    Ups! falto tu Email.
+                                </div>
+                            </div>
+                            
+                            <div class="col-12">
+                                <input 
+                                    type="tel" 
+                                    pattern="[0-9]{9}" 
+                                    maxlength="9" 
+                                    name="" 
+                                    placeholder="Fono Ej: 912345678" 
+                                    class="form-control form-control-sm" 
+                                    required>
+                                <div class="invalid-feedback">
+                                    Cuál es tu Número de contacto?
+                                </div>
+                            </div>
+
+                            <div class="col-12">
+                                <textarea maxlength="200" class="form-control form-control-sm" placeholder="Mensaje aquí.."></textarea>
+                            </div>
+        
+                            <input type="submit" class="btn" name="" value="enviar">
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div id="sidebar-contact-result">
+                <div class="container text-center">
+                    <img class="img-fluid img-contact" src="assets/img/habulogo.svg" alt="Habu Pay">
+                    <div class="pt-5">
+                        <p>Pronto estaremos en contacto.</p>
+                    </div>
+                </div> 
             </div>
         </div>
         <!-- contact -->
