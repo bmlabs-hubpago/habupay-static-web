@@ -15,8 +15,42 @@ $(document).ready(function(){
 });
 
 function contactar() {
-  $('#sidebar-contact').toggleClass('active');
-  $('#sidebar-contact-result').toggleClass('active');
+  let body = {  
+    nombre: document.getElementById("nombre").value,  
+    email: document.getElementById("email").value,  
+    fono: document.getElementById("fono").value,  
+    mensaje: document.getElementById("mensaje").value
+  };
+
+  $.ajax({
+    type: "POST",
+    url : "https://api.hubpago.com/app-admin/api-public-admin/api/v1/Empresa/Contacto",
+    data : JSON.stringify(body),
+    processData: false,
+    beforeSend: function(request) {
+      request.setRequestHeader("ApiKey", 'f432b39d-42be-4c93-8faf-458c87bb22bb');
+      request.setRequestHeader("Content-Type", 'application/json; charset=utf-8');
+    },
+    success: function(data, textStatus, jqXHR) {
+      debugger;
+      if (data == true) {
+        $('#sidebar-contact').toggleClass('active');
+        $('#sidebar-contact-result').toggleClass('active');
+      } else {
+        sideBarContactToggle();
+      }
+    },
+    error: function (jqXHR, textStatus, errorThrown) {
+      sideBarContactToggle();
+    }
+  });
+}
+
+function sideBarContactToggle() {
+  $('#sidebar-contact-alert').toggleClass('active');
+  setTimeout(() => {
+    $('#sidebar-contact-alert').toggleClass('active');
+  }, 5000);
 }
 
 // prevent screen from moving when clicking on <a href=></a>
@@ -39,7 +73,7 @@ function removeEvent(evt) {
         } else {
           event.preventDefault();
           event.stopPropagation();
-          contactar();
+          contactar(form);
         }
         form.classList.add('was-validated');
       }, false);
