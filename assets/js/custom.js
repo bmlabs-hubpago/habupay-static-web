@@ -32,7 +32,6 @@ function contactar() {
       request.setRequestHeader("Content-Type", 'application/json; charset=utf-8');
     },
     success: function(data, textStatus, jqXHR) {
-      debugger;
       if (data == true) {
         $('#sidebar-contact').toggleClass('active');
         $('#sidebar-contact-result').toggleClass('active');
