@@ -24,7 +24,7 @@ function contactar() {
 
   $.ajax({
     type: "POST",
-    url : "https://api.hubpago.com/app-admin/api-public-admin/api/v1/Empresa/Contacto",
+    url : "https://api.habupay.com/app-admin/api-public-admin/api/v1/Empresa/Contacto",
     data : JSON.stringify(body),
     processData: false,
     beforeSend: function(request) {
