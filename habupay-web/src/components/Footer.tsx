@@ -40,16 +40,16 @@ export function Footer() {
 
     legal: [
     {
-      label: 'Términos y condiciones',
-      href: '#terminos'
+      label: 'Términos y Condiciones',
+      href: '/terminos-y-condiciones'
     },
     {
-      label: 'Política de privacidad',
-      href: '#privacidad'
+      label: 'Política de Privacidad',
+      href: '/politica-de-privacidad'
     },
     {
       label: 'Seguridad',
-      href: '#seguridad'
+      href: '/seguridad'
     }]
 
   };
